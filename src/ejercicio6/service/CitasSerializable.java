@@ -2,9 +2,9 @@ package ejercicio6.service;
 
 import java.io.*;
 
-public class ObjectSerializer {
+public class CitasSerializable {
 
-    public static void writeObjectToFile(Object obj, String fileName) throws IOException { //Serializar
+    public static void writeobjectToFile(Object obj, String fileName) throws IOException {
         FileOutputStream fileOut = new FileOutputStream(fileName);
         ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
         objOut.writeObject(obj);
@@ -12,7 +12,7 @@ public class ObjectSerializer {
         fileOut.close();
     }
 
-    public static Object readObjectFromFile(String fileName) throws IOException, ClassNotFoundException { //Deserealizar
+    public static Object readObjectFromFile (String fileName) throws IOException, ClassNotFoundException {
         FileInputStream fileIn = new FileInputStream(fileName);
         ObjectInputStream objIn = new ObjectInputStream(fileIn);
         Object obj = objIn.readObject();
@@ -21,4 +21,3 @@ public class ObjectSerializer {
         return obj;
     }
 }
-

@@ -1,22 +1,21 @@
 package ejercicio6.dto;
 
-public class CitasDTO {
+import java.io.Serializable;
+
+public class CitasDTO  implements Serializable {
 
     private String nombrePaciente;
 
-    private Integer cedula;
+    private Integer id;
+    private String fecha;
 
-    private String fechaHora; //Las citas deben mostrarse en oden de fecha y hora .sort
+    private String medico;
 
-
-    private String nombreMedico;
-
-
-    public CitasDTO(String nombrePaciente, Integer cedula, String fechaHora, String nombreMedico) {
+    public CitasDTO(String nombrePaciente, Integer id, String fecha, String medico) {
         this.nombrePaciente = nombrePaciente;
-        this.cedula = cedula;
-        this.fechaHora = fechaHora;
-        this.nombreMedico = nombreMedico;
+        this.id = id;
+        this.fecha = fecha;
+        this.medico = medico;
     }
 
     public String getNombrePaciente() {
@@ -27,38 +26,37 @@ public class CitasDTO {
         this.nombrePaciente = nombrePaciente;
     }
 
-    public Integer getCedula() {
-        return cedula;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCedula(Integer cedula) {
-        this.cedula = cedula;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getFechaHora() {
-        return fechaHora;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechaHora(String fechaHora) {
-        this.fechaHora = fechaHora;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getNombreMedico() {
-        return nombreMedico;
+    public String getMedico() {
+        return medico;
     }
 
-    public void setNombreMedico(String nombreMedico) {
-        this.nombreMedico = nombreMedico;
+    public void setMedico(String medico) {
+        this.medico = medico;
     }
 
     @Override
     public String toString() {
         return "CitasDTO{" +
                 "nombrePaciente='" + nombrePaciente + '\'' +
-                ", cedula=" + cedula +
-                ", fechaHora='" + fechaHora + '\'' +
-                ", nombreMedico='" + nombreMedico + '\'' +
+                ", id=" + id +
+                ", fecha='" + fecha + '\'' +
+                ", medico='" + medico + '\'' +
                 '}';
     }
 }
-

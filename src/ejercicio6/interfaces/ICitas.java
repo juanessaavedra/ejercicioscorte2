@@ -1,13 +1,14 @@
 package ejercicio6.interfaces;
 
+import ejercicio4.dto.TurnosDTO;
 import ejercicio6.dto.CitasDTO;
 
 import java.io.IOException;
 import java.util.List;
 
-public interface ICita {
+public interface ICitas {
 
-    CitasDTO findByCedula (int cedula);
+    CitasDTO findById (int id);
 
     List<CitasDTO> findAll() throws IOException, ClassNotFoundException;
 
@@ -15,5 +16,5 @@ public interface ICita {
 
     void update (CitasDTO cita) throws IOException;
 
-    void delete (CitasDTO cita) throws IOException;
+    void delete (CitasDTO cita) throws  IOException;
 }

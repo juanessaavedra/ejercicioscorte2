@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface ITurnos {
 
-    TurnosDTO findByTurno(int id);
+    TurnosDTO findById(Integer id);
 
-    List<TurnosDTO> findAll() throws IOException, ClassNotFoundException;
+    List<TurnosDTO> findAll() throws IOException, ClassNotFoundException; //Listar
 
 
     void save (TurnosDTO turno) throws IOException;
@@ -17,4 +17,6 @@ public interface ITurnos {
     void update (TurnosDTO turno) throws IOException;
 
     void delete (TurnosDTO turno) throws IOException;
+
+    public int total();
 }

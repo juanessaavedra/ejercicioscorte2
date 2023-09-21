@@ -3,36 +3,53 @@ package ejercicio4.dto;
 import java.io.Serializable;
 
 public class TurnosDTO implements Serializable {
-    private Integer id; //Una funcion que sume los id
+    private Integer turno; //Una funcion que sume los id
 
-    private double contadorTurnos;
+    private String nombre;
 
-    public TurnosDTO(Integer id, double contadorTurnos) {
-        this.id = id;
-        this.contadorTurnos = contadorTurnos;
+    private Integer cedula;
+
+    private static int ultimoTurno;
+
+    public TurnosDTO() {this.turno = ++ultimoTurno;
     }
 
-    public Integer getId() {
-        return id;
+    public TurnosDTO(String nombre, Integer cedula) { //Aca es donde se da lo de los turnos
+        this();
+        this.nombre = nombre;
+        this.cedula = cedula;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Integer getTurno() {
+        return turno;
     }
 
-    public double getContadorTurnos() {
-        return contadorTurnos;
+    public void setTurno(Integer turno) {
+        this.turno = turno;
     }
 
-    public void setContadorTurnos(double contadorTurnos) {
-        this.contadorTurnos = contadorTurnos;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(Integer cedula) {
+        this.cedula = cedula;
     }
 
     @Override
     public String toString() {
         return "TurnosDTO{" +
-                "id=" + id +
-                ", contadorTurnos=" + contadorTurnos +
+                "turno=" + turno +
+                ", nombre='" + nombre + '\'' +
+                ", cedula=" + cedula +
                 '}';
     }
 }
