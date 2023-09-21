@@ -27,8 +27,8 @@ public class MainTurnos {
                     break;
                 }
                 case "2": {
-                    List<TurnosDTO> mascotas = repo.findAll();
-                    mascotas.forEach(System.out::println);
+                    List<TurnosDTO> turnos = repo.findAll();
+                    turnos.forEach(System.out::println);
                     break;
                 }
                 case "3": {
@@ -39,7 +39,7 @@ public class MainTurnos {
                     break;
                 }
                 case "4": {
-                    System.out.print("Total de turnos: " + repo.total());
+                    System.out.print("Turnos totales: " + repo.total() );
                     break;
                 }
                 case "5": {
